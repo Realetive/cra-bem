@@ -15,32 +15,32 @@ interface IExampleState {
 }
 
 export class Example extends React.Component<IExampleProps, IExampleState> {
-    constructor(props: IExampleProps) {
-        super(props);
+  constructor(props: IExampleProps) {
+    super(props);
 
-        this.state = {
-          myState: 'foo',
-        };
-    }
+    this.state = {
+      myState: 'foo',
+    };
+  }
 
-    render() {
-        const { myState } = this.state;
+  render() {
+    const { myState } = this.state;
 
-        return (
-            <RegistryConsumer>
-                {registries => {
-                    return (
-                        <div className={cnExample()}>
-                            <header className={cnExample('Header')}>
-                              Example's header
-                            </header>
-                            <main className={cnExample('Content')}>
-                              Example's content
-                            </main>
-                        </div>
-                    )
-                }}
-            </RegistryConsumer>
-        );
-    }
+    return (
+      <RegistryConsumer>
+        {registries => {
+          return (
+            <div className={cnExample()}>
+              <header className={cnExample('Header')}>
+                Example's header
+              </header>
+              <main className={cnExample('Content')}>
+                Example's content
+              </main>
+            </div>
+          )
+        }}
+      </RegistryConsumer>
+    );
+  }
 }
