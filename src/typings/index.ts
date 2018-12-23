@@ -1,3 +1,3 @@
 export interface IStore {
-  hello: string;
+  hello: string[];
 }
